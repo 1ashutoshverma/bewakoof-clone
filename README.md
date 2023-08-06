@@ -11,5 +11,4 @@ Case we will use
 3. for variables -> hello_masai
 4. for localstorage key -> HelloMasai
 
-local storage data
-write keys here
+local storage data -> write the keys below
