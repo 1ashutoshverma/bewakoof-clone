@@ -16,4 +16,4 @@ local storage data -> write the keys below
 
 
 Some important id's
-for navbar the id is "navbar", css file is "navbar.css" , JS file is "navbar.js" and the folder for images of navbar is "navbarImages"
+for navbar the id is "navbar", css file is "navbar.css" , JS file is "navbar.js" and the folder for images and all files of navbar is "navbar"
