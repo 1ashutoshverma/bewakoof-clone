@@ -7,6 +7,7 @@ body {
 #navbar {
   position: fixed;
   width: 100%;
+  z-index: 10;
 }
 /* top bar for all pages */
 #nav1 {
