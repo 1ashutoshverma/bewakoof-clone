@@ -281,3 +281,62 @@ mobile_style.addEventListener("mouseout", () => {
     "#nav2 > div > div span:nth-child(3)>a"
   ).style.borderBottom = "";
 });
+
+var left_menu = document.querySelector("#left_menu");
+left_menu.addEventListener("mouseover", () => {
+  document.querySelector("body").style.display = "absolute";
+  document.querySelector("body").style.opacity = "1";
+});
+var hamburger = document.querySelector("#hamburger");
+hamburger.addEventListener("click", () => {
+  left_menu.style.display = "flex";
+  document.querySelector("#cover").style.display = "block";
+});
+var hamburger = document.querySelector("#left_menu_top span");
+hamburger.addEventListener("click", () => {
+  left_menu.style.display = "";
+  document.querySelector("#cover").style.display = "none";
+});
+
+var abc = {
+  email: "abc@gmail.com",
+  password: "1234",
+  status: "loggedIn",
+};
+
+var loginstatus = document.querySelector("#login_button");
+updateLogin(abc);
+function updateLogin(abc) {
+  if (abc.status == "loggedIn") {
+    document.querySelector("#humanicon").style.display = "flex";
+    // document.querySelector("#login_a").style.display = "none";
+  } else {
+    document.querySelector("#login_a").style.display = "flex";
+    document.querySelector("#humanicon").style.display = "none";
+  }
+}
+
+var logoutButton = document.querySelector("#logout_button");
+logoutButton.addEventListener("click", () => {
+  abc.status = "loggedOut";
+  updateLogin(abc);
+});
+// Get the login button and the dropdown content
+const loginButton = document.getElementById("login_button");
+const loginDropdown = document.getElementById("login_dropdown");
+
+// Show the dropdown when login button is clicked
+loginButton.addEventListener("mouseover", () => {
+  loginDropdown.style.display = "block";
+});
+loginButton.addEventListener("mouseout", () => {
+  loginDropdown.style.display = "none";
+});
+
+const log = document.getElementById("main_login_dropdown");
+log.addEventListener("mouseover", () => {
+  loginDropdown.style.display = "block";
+});
+log.addEventListener("mouseout", () => {
+  loginDropdown.style.display = "none";
+});

@@ -7,8 +7,7 @@ body {
 #navbar {
   position: fixed;
   width: 100%;
-  /* z-index: 1000; */
-  /* background-color: white; */
+  /* display: none; */
 }
 /* top bar for all pages */
 #nav1 {
@@ -95,9 +94,11 @@ body {
   border-radius: 5px;
 }
 #search-img {
-  border-radius: 5px;
-  width: 15%;
+  border-radius: 2px;
+  width: 8%;
+  margin: 8px;
 }
+
 #search-icon input {
   background-color: #eaeaea;
   border: none;
@@ -246,6 +247,177 @@ body {
   color: #817e7e;
 }
 
+#material {
+  padding-top: 80px;
+}
+
+/* Navbar for mobile phones */
+#nav_small_screen {
+  display: flex;
+  padding: 15px 0;
+  box-shadow: rgba(9, 30, 66, 0.08) 0px 0px 6px 1px;
+  background-color: white;
+}
+#nav_small_screen div:nth-child(1) {
+  width: 40px;
+  padding-left: 1.5%;
+}
+#nav_small_screen div:nth-child(2) {
+  width: 80%;
+}
+#nav_small_screen div:nth-child(3) {
+  display: flex;
+  justify-content: space-around;
+  width: 110px;
+}
+
+/* Left menu */
+#left_menu {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  overflow-y: scroll;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  background-color: white;
+  display: none;
+}
+#left_menu_top {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: rgba(9, 30, 66, 0.08) -5px 0px 8px 0px;
+  height: 58px;
+}
+#left_menu_top span {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+#left_menu_top h5 {
+  width: 80%;
+}
+#left_menu_top + div {
+  margin-top: 15px;
+  /* padding-left: 20px; */
+}
+
+#left_menu_top + div a,
+#left_menu_top + div p {
+  padding-left: 20px;
+}
+#left_menu_top + div div {
+  padding-left: 10px;
+}
+
+#left_menu_top span {
+  margin-right: 15px;
+  color: black;
+}
+#left_menu::-webkit-scrollbar {
+  display: none;
+}
+#left_icon {
+  display: flex;
+  /* justify-content: space-around; */
+  width: 100%;
+}
+#left_icon div {
+  display: flex;
+  align-items: center;
+}
+#left_icon div span {
+  margin: 0 15px;
+  font-size: 1.2rem;
+}
+#left_icon img {
+  width: 30%;
+}
+#arrow img {
+  width: 20px;
+  margin-left: 20px;
+}
+#arrow img:hover {
+  cursor: pointer;
+}
+#left_menu p {
+  color: rgb(165, 161, 161);
+}
+#left_menu a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  display: block;
+  background-color: #f8f7f7;
+}
+
+#cover {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: #817e7e;
+  opacity: 0.3;
+  display: none;
+}
+/* drop down for login button */
+/* Style for the dropdown content */
+#main_login_dropdown {
+  margin: auto;
+  max-width: 1200px;
+  /* border: 1px solid red; */
+}
+#login_button {
+  display: flex;
+  height: 44px;
+  justify-content: center;
+}
+#humanicon {
+  display: none;
+  width: 75%;
+}
+#login_a {
+  display: none;
+}
+.dropdown-content {
+  position: sticky;
+  top: 1;
+  background-color: white;
+  width: 170px;
+  margin-left: 79%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  display: none;
+}
+
+/* Style for individual dropdown items */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+@media screen and (width>900px) {
+  #nav_small_screen {
+    display: none;
+  }
+}
+/* Media query for navbar */
+@media screen and (width<900px) {
+  #nav1,
+  #nav2 {
+    display: none;
+  }
+}
 /* media query for dropdown menu */
 @media screen and (width<1200px) {
   #dropdown_menu_mobile {
@@ -260,11 +432,4 @@ body {
     max-width: 900px;
     height: 350px;
   }
-}
-
-/* .d {
-  background-color: red;
-} */
-#material {
-  padding-top: 80px;
 }
