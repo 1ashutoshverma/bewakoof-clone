@@ -299,6 +299,7 @@ hamburger.addEventListener("click", () => {
 });
 
 var abc = {
+  name: "Ashu",
   email: "abc@gmail.com",
   password: "1234",
   status: "loggedIn",
@@ -310,14 +311,25 @@ function updateLogin(abc) {
   if (abc.status == "loggedIn") {
     document.querySelector("#humanicon").style.display = "flex";
     // document.querySelector("#login_a").style.display = "none";
+    document.querySelector("#phone_login").textContent = abc.name;
+    document.querySelector("#laptop_login").textContent = abc.name;
   } else {
     document.querySelector("#login_a").style.display = "flex";
     document.querySelector("#humanicon").style.display = "none";
+    document.querySelector(
+      "#phone_login"
+    ).innerHTML = `<a href="login.html" style="background-color: white;">Login</a>`;
+    document.querySelector("#logout_mobile").innerHTML = "";
   }
 }
 
 var logoutButton = document.querySelector("#logout_button");
 logoutButton.addEventListener("click", () => {
+  abc.status = "loggedOut";
+  updateLogin(abc);
+});
+var logoutmobile = document.querySelector("#logout_mobile");
+logoutmobile.addEventListener("click", () => {
   abc.status = "loggedOut";
   updateLogin(abc);
 });

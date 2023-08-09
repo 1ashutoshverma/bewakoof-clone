@@ -7,7 +7,6 @@ body {
 #navbar {
   position: fixed;
   width: 100%;
-  /* display: none; */
 }
 /* top bar for all pages */
 #nav1 {
@@ -303,7 +302,6 @@ body {
 }
 #left_menu_top + div {
   margin-top: 15px;
-  /* padding-left: 20px; */
 }
 
 #left_menu_top + div a,
@@ -323,7 +321,6 @@ body {
 }
 #left_icon {
   display: flex;
-  /* justify-content: space-around; */
   width: 100%;
 }
 #left_icon div {
@@ -368,7 +365,6 @@ body {
 #main_login_dropdown {
   margin: auto;
   max-width: 1200px;
-  /* border: 1px solid red; */
 }
 #login_button {
   display: flex;
