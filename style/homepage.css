@@ -35,7 +35,7 @@
 #second_tile {
   display: flex;
   /* width: 1200px; */
-  overflow-x: auto;
+  /* overflow: visible; */
   margin: auto;
   flex-wrap: wrap;
   justify-content: center;
@@ -55,7 +55,9 @@
 /* Third tile */
 .headings {
   text-align: center;
-  margin-bottom: 3px;
+  margin: 10px;
+  font-size: 1.4rem;
+  /* margin-bottom: 3px; */
 }
 #third_tile {
   display: flex;
@@ -66,6 +68,47 @@
   width: 50vw;
 }
 #third_tile img {
+  width: 100%;
+}
+
+#forth_tile {
+  width: 100%;
+}
+#forth_tile img {
+  width: 100%;
+}
+
+#fifth_tile,
+#seventh_tile {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+#fifth_tile img,
+#seventh_tile img {
+  width: 100%;
+}
+
+.sixth_tile {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4px;
+}
+.sixth_tile img {
+  width: 100%;
+}
+#eight_tile {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 4px;
+}
+#eight_tile img {
+  width: 100%;
+}
+#top_accesories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+#top_accesories img {
   width: 100%;
 }
 @media screen and (width<900px) {

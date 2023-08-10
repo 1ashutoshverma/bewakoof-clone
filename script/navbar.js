@@ -59,9 +59,9 @@ function updateDropDown(arr) {
   //creating elements
   let main_div = document.createElement("div");
   for (let i = 0; i < arr.length; i++) {
-    const divElement = document.createElement("div");
+    let divElement = document.createElement("div");
     for (let j = 0; j < arr[i].length; j++) {
-      console.log(arr[i][j]);
+      // console.log(arr[i][j]);
       if (j == 0) {
         let p = document.createElement("h5");
         p.textContent = arr[i][j];
@@ -74,6 +74,8 @@ function updateDropDown(arr) {
     }
     main_div.appendChild(divElement);
   }
+  // console.log(document.querySelector("#dropdown_menu_women"));
+  // console.log(document.querySelector("#dropdown_menu_women"));
   document.querySelector("#dropdown_menu_women").append(main_div);
 }
 
@@ -168,7 +170,7 @@ function updateDropDownMen(arr) {
   for (let i = 0; i < arr.length; i++) {
     const divElement = document.createElement("div");
     for (let j = 0; j < arr[i].length; j++) {
-      console.log(arr[i][j]);
+      // console.log(arr[i][j]);
       if (j == 0) {
         let p = document.createElement("h5");
         p.textContent = arr[i][j];
@@ -238,7 +240,7 @@ function updateDropDownMobile(arr) {
   for (let i = 0; i < arr.length; i++) {
     const divElement = document.createElement("div");
     for (let j = 0; j < arr[i].length; j++) {
-      console.log(arr[i][j]);
+      // console.log(arr[i][j]);
       if (j == 0) {
         let p = document.createElement("h5");
         p.textContent = arr[i][j];
@@ -298,15 +300,10 @@ hamburger.addEventListener("click", () => {
   document.querySelector("#cover").style.display = "none";
 });
 
-var abc = {
-  name: "Ashu",
-  email: "abc@gmail.com",
-  password: "1234",
-  status: "loggedIn",
-};
+var login_data = JSON.parse(localStorage.getItem("user")) || [];
+console.log(login_data);
+updateLogin(login_data);
 
-var loginstatus = document.querySelector("#login_button");
-updateLogin(abc);
 function updateLogin(abc) {
   if (abc.status == "loggedIn") {
     document.querySelector("#humanicon").style.display = "flex";
@@ -322,17 +319,21 @@ function updateLogin(abc) {
     document.querySelector("#logout_mobile").innerHTML = "";
   }
 }
-
+const log = document.getElementById("main_login_dropdown");
 var logoutButton = document.querySelector("#logout_button");
 logoutButton.addEventListener("click", () => {
-  abc.status = "loggedOut";
-  updateLogin(abc);
+  login_data.status = "loggedOut";
+  updateLogin(login_data);
+  localStorage.setItem("user", JSON.stringify(login_data));
+  loginDropdown.style.display = "none";
 });
 var logoutmobile = document.querySelector("#logout_mobile");
 logoutmobile.addEventListener("click", () => {
-  abc.status = "loggedOut";
-  updateLogin(abc);
+  login_data.status = "loggedOut";
+  updateLogin(login_data);
+  localStorage.setItem("user", JSON.stringify(login_data));
 });
+
 // Get the login button and the dropdown content
 const loginButton = document.getElementById("login_button");
 const loginDropdown = document.getElementById("login_dropdown");
@@ -345,7 +346,6 @@ loginButton.addEventListener("mouseout", () => {
   loginDropdown.style.display = "none";
 });
 
-const log = document.getElementById("main_login_dropdown");
 log.addEventListener("mouseover", () => {
   loginDropdown.style.display = "block";
 });

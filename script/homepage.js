@@ -48,3 +48,81 @@ function updateTiles(arr) {
     secondTile.append(div);
   });
 }
+var fifth_tile = [
+  {
+    img: "https://images.bewakoof.com/uploads/grid/app/category-box-new-D-240x350-printed-tees-m-1685445850.jpg",
+  },
+  {
+    img: "https://images.bewakoof.com/uploads/grid/app/category-box-oversized-tees-m-1685086219.jpg",
+  },
+  {
+    img: "https://images.bewakoof.com/uploads/grid/app/category-box-new-240x350-men-shorts-1686063035.jpg",
+  },
+  {
+    img: "https://images.bewakoof.com/uploads/grid/app/category-box-joggers-m-1684997505.jpg",
+  },
+  {
+    img: "https://images.bewakoof.com/uploads/grid/app/category-box-new-240x350-men-vests-1686063036.jpg",
+  },
+  {
+    img: "https://images.bewakoof.com/uploads/grid/app/category-box-new-240x350-men-fullsleeve-1686063034.jpg",
+  },
+  {
+    img: "https://images.bewakoof.com/uploads/grid/app/category-box-new-D-240x350-printed-tees-w-1685445851.jpg",
+  },
+  {
+    img: "https://images.bewakoof.com/uploads/grid/app/category-box-Oversized-tshirts-Women-1682055634.png",
+  },
+  {
+    img: "https://images.bewakoof.com/uploads/grid/app/category-box-new-D-240x350-fashion-tops-1686305660.jpg",
+  },
+  {
+    img: "https://images.bewakoof.com/uploads/grid/app/category-box-Joggers-Women-1682055633.png",
+  },
+  {
+    img: "https://images.bewakoof.com/uploads/grid/app/category-box-new-D-240x350-WOMEN-Dresses-1681725004.jpg",
+  },
+  {
+    img: "https://images.bewakoof.com/uploads/grid/app/category-box-new-D-240x350-WOMEN-BoyfriendTeess-1681730084.jpg",
+  },
+];
+
+var fifthTile = document.querySelector("#fifth_tile");
+console.log(fifthTile);
+updateFifthTile(fifth_tile, fifthTile);
+
+function updateFifthTile(arr, name) {
+  arr.forEach((ele) => {
+    //making things
+    let div = document.createElement("div");
+    let a = document.createElement("a");
+    let img = document.createElement("img");
+    img.setAttribute("src", ele.img);
+    a.setAttribute("href", "#");
+    a.append(img);
+    div.append(a);
+    name.append(div);
+  });
+}
+var seventh_tile = [
+  {
+    img: "https://images.bewakoof.com/uploads/grid/app/category-box-new-240x350-men-sshirts-1686063036.jpg",
+  },
+  {
+    img: "https://images.bewakoof.com/uploads/grid/app/category-box-boxers-1685086219.jpg",
+  },
+  {
+    img: "https://images.bewakoof.com/uploads/grid/app/category-box--m-pyjama-1685086220.jpg",
+  },
+  {
+    img: "https://images.bewakoof.com/uploads/grid/app/category-box-new-240x350-women-cords-1686063032.jpg",
+  },
+  {
+    img: "https://images.bewakoof.com/uploads/grid/app/category-box-new-240x350-women-pjs-1686063033.jpg",
+  },
+  {
+    img: "https://images.bewakoof.com/uploads/grid/app/category-box-new-240x350-women-shorts-1686063034.jpg",
+  },
+];
+var seventhTile = document.querySelector("#seventh_tile");
+updateFifthTile(seventh_tile, seventhTile);
