@@ -71,10 +71,10 @@
   width: 100%;
 }
 
-#forth_tile {
+.forth_tile {
   width: 100%;
 }
-#forth_tile img {
+.forth_tile img {
   width: 100%;
 }
 
@@ -110,6 +110,9 @@
 }
 #top_accesories img {
   width: 100%;
+}
+#footer_homepage {
+  background-color: #181818;
 }
 @media screen and (width<900px) {
   #NAV3 {
