@@ -198,7 +198,7 @@ var menPageData = [
   },
   {
     img: "https://images.bewakoof.com/t640/conquer-strip-half-sleeve-t-shirt-black-300965-1656141795-1.jpg",
-    brand: "Bewakoof",
+    brand: "Rigo",
     name: "Conquer Strip Half Sleeve T-Shirts Black",
     price: "499",
     disPrice: "599",
@@ -207,7 +207,7 @@ var menPageData = [
   },
   {
     img: "https://images.bewakoof.com/t640/conquer-strip-half-sleeve-t-shirt-black-300965-1656141795-1.jpg",
-    brand: "Bewakoof",
+    brand: "Snitch",
     name: "Conquer Strip Half Sleeve T-Shirts Black",
     price: "499",
     disPrice: "199",

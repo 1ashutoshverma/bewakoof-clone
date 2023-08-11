@@ -29,19 +29,22 @@ body {
   font-size: 1.7rem;
   color: rgb(172, 172, 172);
   margin-bottom: 10px;
-  /* font-weight: 100; */
 }
 #filter_section {
   display: flex;
   flex-direction: column;
+  position: sticky;
+  top: 75px;
   gap: 0.5rem;
   width: 40%;
+  height: fit-content;
 }
 #filter_section select {
   border: none;
   margin-bottom: 8px;
   padding-bottom: 10px;
   outline: none;
+  width: 100%;
   border-bottom: 1px solid rgb(231, 231, 231);
 }
 #filter_section div {
