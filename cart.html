@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <title>
+      Online Fashion Shopping for Men, Women, Accessories - Bewakoof.com
+    </title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://images.bewakoof.com/web/favicon-1635856217.png"
+    />
+    <link rel="stylesheet" href="./style/cart.css" />
+    <style>
+      #address-div {
+        display: none;
+        width: 55%;
+        margin: auto;
+        border: 1px solid rgb(188, 188, 188);
+      }
+      #close-div {
+        width: 85%;
+        display: flex;
+        margin: auto;
+        align-items: center;
+        justify-content: space-between;
+      }
+      #close-div > h1 {
+        font-family: montserrat, sans-serif;
+      }
+      #close-div > p {
+        font: montserrat, sans-serif;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      #input-div {
+        width: 85%;
+        margin: auto;
+        text-align: center;
+      }
+      #input-div > input {
+        width: 90%;
+        height: 50px;
+        margin-top: 20px;
+        border-radius: 5px;
+        border: 1px solid rgb(168, 167, 167);
+      }
+      #input-div > input::placeholder {
+        font-size: 15px;
+        margin-left: 5%;
+        color: rgb(160, 160, 160);
+        font-weight: bold;
+      }
+      #svad {
+        width: 40%;
+        cursor: pointer;
+        height: 50px;
+        border: none;
+        margin-top: 5%;
+        margin-bottom: 3%;
+        text-align: center;
+        background-color: #4fa4a3;
+        color: white;
+        border-radius: 5px;
+        font-size: 20px;
+      }
+      #navbar {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        border-bottom: 1px solid rgb(181, 180, 180);
+        margin-bottom: 15px;
+        justify-content: space-between;
+      }
+      #sign-div {
+        width: 20%;
+        margin-left: 60%;
+      }
+      #sign-text {
+        font-family: montserrat, sans-serif;
+        font-size: 12px;
+        color: grey;
+      }
+      #sign-email {
+        font: montserrat, sans-serif;
+        font-size: 14px;
+        margin-top: -10px;
+        color: rgb(76, 75, 75);
+      }
+      #logo {
+        margin-left: 10%;
+      }
+      #loader {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: 1;
+      }
+      #loader img {
+        width: 150px;
+        height: 100px;
+        background-color: white;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 10px grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <img
+        src="https://images.bewakoof.com/web/ic-desktop-bwkf-trademark-logo.svg"
+        alt=""
+        id="logo"
+      />
+      <div id="sign-div">
+        <p id="sign-text">Signed as</p>
+        <p id="sign-email"></p>
+      </div>
+    </div>
+    <div id="empty-bag"></div>
+    <div id="main">
+      <div id="left-div">
+        <h2>My Bag : <span id="length"></span> items(s)</h2>
+        <div id="top">
+          <img src="https://images.bewakoof.com/web/Red-truck.png" alt="" />
+          <p>Yay! You get FREE delivery on this order</p>
+        </div>
+        <div id="items"></div>
+      </div>
+      <div id="detail-div">
+        <div class="discount">
+          <p class="code">
+            Get Rs.200 instant discount on your First Purchase above Rs.999.
+            Coupon code - NEW200
+          </p>
+        </div>
+        <div class="discount">
+          <p class="code">
+            Whistles! Get extra 20% Cashback on prepaid orders above Rs.499.
+            Coupon code - NEW20. Applicable for new customers only!
+          </p>
+        </div>
+        <div id="price-div">
+          <div id="redeem-div">
+            <p>Apply Coupon / Gift Card / Referral</p>
+            <p id="rd">Redeem >></p>
+          </div>
+          <div id="prs">
+            <p>PRICE SUMMARY</p>
+          </div>
+          <div class="price">
+            <p>Total MRP (Incl. of taxes)</p>
+            <p id="total"></p>
+          </div>
+          <div class="price">
+            <p>Shipping Charges</p>
+            <p id="free">FREE</p>
+          </div>
+          <div class="price">
+            <p>Bag Discount</p>
+            <p id="off"></p>
+          </div>
+          <div class="price">
+            <p>Subtotal</p>
+            <p id="final-price"></p>
+          </div>
+          <div id="saving-div">
+            <p>You are saying <span id="save-span"></span> on this order</p>
+          </div>
+          <div id="last-div">
+            <div id="finish">
+              <p>Total</p>
+              <p id="span-price">₹</p>
+            </div>
+            <button id="address">ADD ADDRESS</button>
+            <button id="continue">CONTINUE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="address-div">
+      <div id="close-div">
+        <h2>Add New Address</h2>
+        <p id="close">X</p>
+      </div>
+      <div id="input-div">
+        <input type="text" id="country" placeholder=" Country" />
+        <input type="text" id="name" placeholder=" Full Name" />
+        <input type="text" id="mobile" placeholder=" Mobile Number" />
+        <input
+          type="text"
+          id="pin"
+          placeholder=" Pincode/Postal Code/Zip Code"
+        />
+        <input type="text" id="state" placeholder=" State" />
+        <input type="text" id="city" placeholder=" City" />
+        <button id="svad">Save Address</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="./script/cart.js"></script>
+<script src="./script/loader.js"></script>

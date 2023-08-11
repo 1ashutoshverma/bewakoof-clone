@@ -1,7 +1,9 @@
-let mobile;
+var data = JSON.parse(localStorage.getItem("user")) || [];
+// console.log(data.mobile);
+let mobile_login;
 let login_btn = document.querySelector("#login");
 login_btn.addEventListener("click", function (event) {
-  mobile = document.querySelector("#mobile").value;
+  mobile_login = document.querySelector("#mobile").value;
   login();
 });
 
@@ -15,12 +17,13 @@ document.querySelector("#email").addEventListener("click", function (event) {
 });
 
 function login() {
-  if (mobile.length == 10) {
-    localStorage.setItem("phone", mobile);
+  if (document.querySelector("#mobile").value == data.mobile) {
+    window.location.href = "email.html";
+  } else if (mobile_login.length == 10) {
     window.location.href = "signup.html";
   } else {
     document.querySelector("#valid-num").innerText =
-      "Please Enter a Valid Mobile Number";
+      "Mobile Number is required";
     document.querySelector("#login").style.marginTop = "35px";
     document.querySelector("#input-div").style.border = "1px solid red";
     document.querySelector("#valid-num").style.marginLeft = "-47%";

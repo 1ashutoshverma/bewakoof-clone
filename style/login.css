@@ -1,7 +1,12 @@
+#login_a {
+  display: none;
+}
+
 body {
   margin: 0px;
 }
 #container {
+  padding-top: 100px;
   width: 100%;
   font: caption;
   display: flex;
@@ -85,6 +90,7 @@ body {
   color: red;
   font-size: small;
   margin-left: -10px;
+  font-family: montserrat, sans-serif;
 }
 #login {
   width: 60%;

@@ -17,36 +17,23 @@ function userLogin() {
   if (userObj.email == "admin" && userObj.pass == "admin") {
     window.location.href = "admin.html";
   }
-  var users = JSON.parse(localStorage.getItem("user"));
+  var users = JSON.parse(localStorage.getItem("user")) || [];
 
   if (users) {
     console.log(users);
-    var username;
-    var saveemail;
-    var num;
-    for (var i = 0; i < users.length; i++) {
-      var element = users[i];
-      if (userObj.email == element.email && userObj.pass == element.password) {
-        element.status = "loggedIn";
-        username = element.name;
-        saveemail = element.email;
-        num = element.mobile;
-      } else {
-        element.status = "loggedOff";
-      }
-      console.log(element.mail, element.password);
-    }
-    if (username) {
-      localStorage.setItem("username", JSON.stringify(username));
-      localStorage.setItem("email", JSON.stringify(saveemail));
-      localStorage.setItem("mobile", JSON.stringify(num));
+    if (userObj.email == users.email && userObj.pass == users.password) {
+      users.status = "loggedIn";
+      localStorage.setItem("user", JSON.stringify(users));
       window.location.href = "index.html";
     } else {
       alert("Wrong Email or Password");
     }
+    console.log(element.email, element.password);
   } else {
-    console.error(`No data found in local storage for key 'user'`);
+    alert("New User - Sign Up First");
+    window.location.href = "signup.html";
   }
+  console.error(`No data found in local storage for key 'user'`);
 }
 function check() {
   let email = document.querySelector("#email").value;
