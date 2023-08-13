@@ -275,7 +275,7 @@ body {
 #left_menu {
   display: flex;
   flex-direction: column;
-  width: 35%;
+  width: 40%;
   overflow-y: scroll;
   height: 100vh;
   position: fixed;
@@ -338,6 +338,7 @@ body {
 #arrow img {
   width: 20px;
   margin-left: 20px;
+  padding-right: 20px;
 }
 #arrow img:hover {
   cursor: pointer;
@@ -357,7 +358,7 @@ body {
   position: fixed;
   height: 100vh;
   width: 100vw;
-  background-color: #817e7e;
+  background-color: #363434;
   opacity: 0.3;
   display: none;
 }

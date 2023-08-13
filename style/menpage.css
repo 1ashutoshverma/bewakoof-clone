@@ -7,6 +7,8 @@ body {
   margin: auto;
   margin-top: 0;
   padding-top: 75px;
+  padding-left: 1%;
+  padding-right: 1%;
   /* border: 1px solid red; */
 }
 #counting > div {
@@ -36,7 +38,7 @@ body {
   position: sticky;
   top: 75px;
   gap: 0.5rem;
-  width: 40%;
+  width: 70%;
   height: fit-content;
 }
 #filter_section select {
@@ -218,6 +220,15 @@ body {
   #footer_below p {
     font-size: 0.95rem;
   }
+  #filter_section {
+    width: 80%;
+  }
+  #filter_section p {
+    font-size: 0.75rem;
+  }
+  #filter_section select {
+    font-size: 0.75rem;
+  }
 }
 @media screen and (width<550px) {
   #footer_logo + div {
@@ -229,6 +240,9 @@ body {
   }
   #footer_below p {
     font-size: 0.75rem;
+  }
+  #filter_section {
+    width: 100%;
   }
 }
 @media screen and (width<900px) {
