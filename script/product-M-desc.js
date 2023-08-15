@@ -1,13 +1,5 @@
 var bag = JSON.parse(localStorage.getItem("cart")) || [];
-
-var data = {
-  img: "https://images.bewakoof.com/t1080/women-s-blue-typography-slim-fit-t-shirt-604043-1689839689-1.jpg",
-  brand: "Rigo",
-  name: "Women's Blue Typography Slim Fit T-shirt",
-  price: "999",
-  disPrice: "299",
-  color: "blue",
-};
+var data = JSON.parse(localStorage.getItem("product"));
 
 let photo = document.querySelector("#photo > img");
 let brand = document.querySelector("#brand_name");
@@ -22,6 +14,7 @@ productName.textContent = data.name;
 price.textContent = data.price;
 disPrice.textContent = data.disPrice;
 
+document.querySelector("#main_container > p > span").textContent = data.name;
 let per = Math.round(100 - (Number(data.disPrice) / Number(data.price)) * 100);
 console.log(per);
 percentage.textContent = `${per}% off`;
@@ -61,7 +54,7 @@ let offer = document.querySelector("#offer");
 offer_plus.addEventListener("click", () => {
   if (offer_plus.textContent == "+") {
     offer_plus.textContent = "-";
-    offer.style.display = "block";
+    offer.style.display = "flex";
   } else {
     offer_plus.textContent = "+";
     offer.style.display = "";

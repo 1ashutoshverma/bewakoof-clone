@@ -175,6 +175,12 @@ function updateCart(arr) {
     mainDiv.append(img, bottomdiv);
     pagelink.append(mainDiv);
     document.querySelector("#products").append(pagelink);
+
+    mainDiv.addEventListener("click", () => {
+      localStorage.setItem("product", JSON.stringify(ele));
+      window.location.href = "./product-M-desc.html";
+      // console.log(ele);
+    });
   });
 }
 
