@@ -27,7 +27,9 @@
   gap: 15px;
   overflow-x: auto;
   flex-wrap: nowrap;
+  /* animation: scroll 10s linear infinite; */
 }
+
 #first_tile img {
   width: 36vw;
 }

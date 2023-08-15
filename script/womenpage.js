@@ -164,7 +164,7 @@ function updateCart(arr) {
     mainDiv.addEventListener("click", () => {
       localStorage.setItem("product", JSON.stringify(ele));
       window.location.href = "./product-M-desc.html";
-      console.log(ele);
+      // console.log(ele);
     });
   });
 }

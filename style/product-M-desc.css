@@ -333,6 +333,14 @@ body {
   #footer_below p {
     font-size: 0.95rem;
   }
+  body {
+    font-size: 14px;
+  }
+}
+@media screen and (width<650px) {
+  body {
+    font-size: 12px;
+  }
 }
 @media screen and (width<550px) {
   #footer_logo + div {
@@ -345,27 +353,19 @@ body {
   #footer_below p {
     font-size: 0.75rem;
   }
-}
-
-@media screen and (width<900px) {
-  body {
-    font-size: 14px;
-  }
-}
-@media screen and (width<650px) {
-  body {
-    font-size: 12px;
-  }
-}
-@media screen and (width<500px) {
   body {
     font-size: 12px;
   }
   #main_container {
+    padding: 5px;
     padding-top: 60px;
   }
   #data_container {
     flex-direction: column;
+    /* border: 1px solid red; */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
   #photo {
     position: inherit;
