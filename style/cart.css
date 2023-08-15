@@ -29,10 +29,12 @@ body {
 #left-div {
   width: 50%;
 }
+/* main starts here */
 #main {
   display: flex;
   margin: auto;
   width: 80%;
+  justify-content: space-between;
 }
 #items {
   width: 100%;
