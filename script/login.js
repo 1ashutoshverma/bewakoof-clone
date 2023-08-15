@@ -24,9 +24,9 @@ function login() {
   } else {
     document.querySelector("#valid-num").innerText =
       "Mobile Number is required";
-    document.querySelector("#login").style.marginTop = "35px";
+    // document.querySelector("#login").style.marginTop = "35px";
     document.querySelector("#input-div").style.border = "1px solid red";
-    document.querySelector("#valid-num").style.marginLeft = "-47%";
+    // document.querySelector("#valid-num").style.marginLeft = "-47%";
   }
 }
 

@@ -4,57 +4,71 @@
 
 body {
   margin: 0px;
-}
-#container {
-  padding-top: 75px;
-  width: 100%;
-  font: caption;
-  display: flex;
-}
-#heading-div {
-  width: 60%;
-  padding-bottom: 60px;
   background-color: #fffae8;
 }
-#heading-div > img {
-  padding-top: 40px;
-  padding-left: 15px;
+#container {
+  padding-top: 100px;
+  width: 98%;
+  font: caption;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  max-width: 1200px;
+}
+
+#heading-div {
+  width: 50%;
+  background-color: #fffae8;
 }
 #heading {
-  margin-left: 30px;
-  width: 80%;
   font-family: montserrat, sans-serif;
-  font-size: 30px;
+  font-size: 1.8rem;
   font-weight: bold;
 }
+#heading-div img {
+  width: 100%;
+}
+
 #login-div {
   text-align: center;
   font-size: medium;
+  background-color: white;
+  width: 50%;
 }
+
 #login-div h1 {
-  font-size: 24px;
+  font-size: 1.6rem;
   font-family: montserrat, sans-serif;
-  margin-bottom: 22px;
+  margin-bottom: 5%;
 }
 #para {
   font-family: montserrat, sans-serif;
-  font-size: 18px;
+  font-size: 1.15rem;
   color: #a0a0a0;
-  margin: 0 0 70px;
-  line-height: 1.44;
 }
+
 #input-div {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0;
+  margin: auto;
+  margin-top: 12%;
+  border-radius: 5px;
+  border: 1px solid #aaaaaa;
+}
+/* #input-div {
   width: 60%;
   height: 60px;
   margin: auto;
   margin-top: 12%;
   border-radius: 5px;
   border: 1px solid #aaaaaa;
-}
+} */
 #choose {
-  height: 60%;
-  width: 20%;
-  background-color: #f5f5f5;
+  width: 3.5rem;
+  background-color: #fcf9f9;
   border: none;
   outline: none;
 }
@@ -77,25 +91,22 @@ body {
 #mobile:focus {
   border: none;
 }
-#mobile {
-  align-items: center;
-}
 #mobile::placeholder {
-  font-size: 18px;
-  font-weight: bold;
-  margin-left: -100px;
-  text-align: left;
+  font-size: 1.05rem;
 }
 #valid-num {
   color: red;
   font-size: small;
-  margin-left: -10px;
+  width: 60%;
+  margin: auto;
+  padding-top: 2px;
+  text-align: left;
   font-family: montserrat, sans-serif;
 }
 #login {
   width: 60%;
   height: 60px;
-  margin-top: 20px;
+  margin-top: 6px;
   border: 1px solid #42a2a2;
   background-color: #42a2a2;
   color: white;
@@ -113,70 +124,56 @@ body {
   font-family: montserrat, sanas-serif;
   background: #fff;
 }
+
 #email {
   display: flex;
-  width: 53%;
+  width: 55%;
   margin: auto;
-  height: 39px;
   border: 1px solid #aaaaaa;
-  font-size: large;
+  font-size: 1rem;
   font-weight: bold;
   font-family: montserrat-bold, sans-serif;
   color: #5c5c5c;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   border-radius: 5px;
 }
+
 #email:hover {
   cursor: pointer;
 }
 #email > img {
   width: 25px;
   height: 22px;
-  margin-right: 12px;
 }
 #buttons {
   margin: auto;
-  width: 53%;
+  width: 55%;
   display: flex;
   margin-top: 15px;
+  justify-content: space-between;
 }
 #buttons img {
   width: 24px;
   height: 24px;
-  margin-right: 10px;
 }
-#google {
+
+#google,
+#facebook {
   display: flex;
   height: 40px;
   width: 48%;
   justify-content: center;
   border: 1px solid #aaaaaa;
   color: #5c5c5c;
-  font-size: large;
+  font-size: 0.9rem;
   font-weight: bold;
   align-items: center;
+  justify-content: space-evenly;
   border-radius: 5px;
   font-family: montserrat-bold, sans-serif;
 }
 #google:hover {
-  cursor: pointer;
-}
-#facebook {
-  display: flex;
-  height: 40px;
-  width: 49%;
-  justify-content: center;
-  border: 1px solid #aaaaaa;
-  color: #5c5c5c;
-  font-size: large;
-  font-weight: bold;
-  align-items: center;
-  margin-left: 3%;
-  border-radius: 5px;
-  font-family: montserrat-bold, sans-serif;
-}
-#facebook:hover {
   cursor: pointer;
 }
 #policy {
@@ -191,4 +188,51 @@ body {
   color: #42a2a2;
   font-weight: bold;
   font-family: montserrat, sans-serif;
+}
+@media screen and (width<900px) {
+  #heading-div {
+    display: none;
+  }
+  #login-div {
+    width: 70%;
+    margin: auto;
+  }
+}
+@media screen and (width<650px) {
+  #heading-div {
+    display: none;
+  }
+  #login-div {
+    width: 100%;
+    margin: auto;
+    font-size: 0.9rem;
+  }
+  #email,
+  #google,
+  #facebook {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (width<400px) {
+  #heading-div {
+    display: none;
+  }
+  #login-div {
+    width: 100%;
+    margin: auto;
+    font-size: 0.9rem;
+  }
+  #buttons {
+    flex-direction: column;
+    width: 100%;
+    /* border: 1px solid red; */
+    align-items: center;
+    gap: 13px;
+  }
+  #email,
+  #google,
+  #facebook {
+    width: 55%;
+  }
 }

@@ -28,12 +28,11 @@ function userLogin() {
     } else {
       alert("Wrong Email or Password");
     }
-    console.log(element.email, element.password);
   } else {
     alert("New User - Sign Up First");
     window.location.href = "signup.html";
   }
-  console.error(`No data found in local storage for key 'user'`);
+  // console.error(`No data found in local storage for key 'user'`);
 }
 function check() {
   let email = document.querySelector("#email").value;
