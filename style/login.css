@@ -1,0 +1,238 @@
+#login_a {
+  display: none;
+}
+
+body {
+  margin: 0px;
+  background-color: #fffae8;
+}
+#container {
+  padding-top: 100px;
+  width: 98%;
+  font: caption;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  max-width: 1200px;
+}
+
+#heading-div {
+  width: 50%;
+  background-color: #fffae8;
+}
+#heading {
+  font-family: montserrat, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+#heading-div img {
+  width: 100%;
+}
+
+#login-div {
+  text-align: center;
+  font-size: medium;
+  background-color: white;
+  width: 50%;
+}
+
+#login-div h1 {
+  font-size: 1.6rem;
+  font-family: montserrat, sans-serif;
+  margin-bottom: 5%;
+}
+#para {
+  font-family: montserrat, sans-serif;
+  font-size: 1.15rem;
+  color: #a0a0a0;
+}
+
+#input-div {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0;
+  margin: auto;
+  margin-top: 12%;
+  border-radius: 5px;
+  border: 1px solid #aaaaaa;
+}
+/* #input-div {
+  width: 60%;
+  height: 60px;
+  margin: auto;
+  margin-top: 12%;
+  border-radius: 5px;
+  border: 1px solid #aaaaaa;
+} */
+#choose {
+  width: 3.5rem;
+  background-color: #fcf9f9;
+  border: none;
+  outline: none;
+}
+#choose:focus {
+  border: none;
+}
+#choose::after {
+  font-size: x-large;
+  color: grey;
+}
+#mobile {
+  align-items: center;
+  height: 95%;
+  width: 70%;
+  border: none;
+  font-size: large;
+  font-weight: bold;
+  outline: none;
+}
+#mobile:focus {
+  border: none;
+}
+#mobile::placeholder {
+  font-size: 1.05rem;
+}
+#valid-num {
+  color: red;
+  font-size: small;
+  width: 60%;
+  margin: auto;
+  padding-top: 2px;
+  text-align: left;
+  font-family: montserrat, sans-serif;
+}
+#login {
+  width: 60%;
+  height: 60px;
+  margin-top: 6px;
+  border: 1px solid #42a2a2;
+  background-color: #42a2a2;
+  color: white;
+  font-size: x-large;
+  border-radius: 5px;
+  font-family: montserrat, sans-serif;
+}
+#login:hover {
+  cursor: pointer;
+}
+#or {
+  text-align: center;
+  margin-top: 30px;
+  color: black;
+  font-family: montserrat, sanas-serif;
+  background: #fff;
+}
+
+#email {
+  display: flex;
+  width: 55%;
+  margin: auto;
+  border: 1px solid #aaaaaa;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: montserrat-bold, sans-serif;
+  color: #5c5c5c;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+}
+
+#email:hover {
+  cursor: pointer;
+}
+#email > img {
+  width: 25px;
+  height: 22px;
+}
+#buttons {
+  margin: auto;
+  width: 55%;
+  display: flex;
+  margin-top: 15px;
+  justify-content: space-between;
+}
+#buttons img {
+  width: 24px;
+  height: 24px;
+}
+
+#google,
+#facebook {
+  display: flex;
+  height: 40px;
+  width: 48%;
+  justify-content: center;
+  border: 1px solid #aaaaaa;
+  color: #5c5c5c;
+  font-size: 0.9rem;
+  font-weight: bold;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  font-family: montserrat-bold, sans-serif;
+}
+#google:hover {
+  cursor: pointer;
+}
+#policy {
+  margin: auto;
+  width: 64%;
+  margin-top: 10%;
+  font-family: montserrat, sans-serif;
+  color: #a0a0a0;
+  font-weight: bold;
+}
+#policy span {
+  color: #42a2a2;
+  font-weight: bold;
+  font-family: montserrat, sans-serif;
+}
+@media screen and (width<900px) {
+  #heading-div {
+    display: none;
+  }
+  #login-div {
+    width: 70%;
+    margin: auto;
+  }
+}
+@media screen and (width<650px) {
+  #heading-div {
+    display: none;
+  }
+  #login-div {
+    width: 100%;
+    margin: auto;
+    font-size: 0.9rem;
+  }
+  #email,
+  #google,
+  #facebook {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (width<400px) {
+  #heading-div {
+    display: none;
+  }
+  #login-div {
+    width: 100%;
+    margin: auto;
+    font-size: 0.9rem;
+  }
+  #buttons {
+    flex-direction: column;
+    width: 100%;
+    /* border: 1px solid red; */
+    align-items: center;
+    gap: 13px;
+  }
+  #email,
+  #google,
+  #facebook {
+    width: 55%;
+  }
+}
