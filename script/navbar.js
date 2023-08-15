@@ -1,9 +1,12 @@
 //for women
 let cartQuantity = JSON.parse(localStorage.getItem("cart")) || [];
-
 var cartquantity = document.querySelectorAll(".cart-quantity");
+let quant = 0;
+cartQuantity.forEach((ele) => {
+  quant += Number(ele.quantity);
+});
 cartquantity.forEach((ele) => {
-  ele.textContent = cartQuantity.length;
+  ele.textContent = quant;
 });
 var womenData = [
   [
