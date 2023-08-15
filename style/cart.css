@@ -1,3 +1,6 @@
+* {
+  font-family: sans-serif;
+}
 body {
   margin: 0px;
 }
@@ -210,4 +213,24 @@ body {
   font-family: montserrat, sans-serif;
   font-size: 12px;
   margin-left: 2%;
+}
+.quantity-div {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-div button {
+  background-color: #4fa4a3;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.quantity-div span {
+  margin: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
 }

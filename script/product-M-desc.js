@@ -20,8 +20,13 @@ console.log(per);
 percentage.textContent = `${per}% off`;
 
 document.querySelector("#add_to_cart").addEventListener("click", () => {
-  bag.push(data);
-  console.log(data);
+  let existingItem = bag.find((item) => item.name === data.name);
+  if (existingItem) {
+    existingItem.quantity = (existingItem.quantity || 1) + 1;
+  } else {
+    data.quantity = 1;
+    bag.push(data);
+  }
   localStorage.setItem("cart", JSON.stringify(bag));
 });
 
