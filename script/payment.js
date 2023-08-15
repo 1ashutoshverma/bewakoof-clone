@@ -1,3 +1,4 @@
+const data = JSON.parse(localStorage.getItem("user"));
 var paymentDebitButton = document.getElementById("payment-debit-button-div");
 var paymentWalletButton = document.getElementById("payment-wallet-button-div");
 var paymentUpiButton = document.getElementById("payment-upi-button-div");
@@ -146,16 +147,15 @@ document
   .getElementById("card-pay-now-button")
   .addEventListener("click", function (event) {
     // let name = localStorage.getItem("userkanaam")
-    var person = prompt("Please enter your OTP", "");
+    var person = prompt("Please enter your OTP(1234)", "");
     if (person == "1234") {
       alert("We are processing your payment !");
       // let arrr = ;
-      pushOrderDetails();
       localStorage.setItem("cart", null);
       localStorage.setItem("address", null);
       // let cartlength=JSON.parse(localStorage.getItem("cart"));
       // document.getElementById("cart_no").innerText=cartlength.length;
-      window.location.href = "./index.html";
+      window.location.replace("./thankyou.html");
     } else {
       alert("Wrong OTP, Try Again");
     }
@@ -187,3 +187,7 @@ function paymentP() {
 }
 
 paymentP();
+document.querySelector("#emailAPka").innerText = data.email;
+document.querySelector("#logo").addEventListener("click", function (event) {
+  window.location.href = "index.html";
+});
