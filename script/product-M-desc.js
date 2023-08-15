@@ -21,7 +21,12 @@ percentage.textContent = `${per}% off`;
 
 document.querySelector("#add_to_cart").addEventListener("click", () => {
   bag.push(data);
+  let cartquantity = document.querySelectorAll(".cart-quantity");
+  cartquantity.forEach((ele) => {
+    ele.textContent = bag.length;
+  });
   alert("Product Added to Cart");
+
   console.log(data);
   localStorage.setItem("cart", JSON.stringify(bag));
 });
