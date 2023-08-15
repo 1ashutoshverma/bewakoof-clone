@@ -144,19 +144,46 @@ paymentCodButton.addEventListener("click", () => {
 
 document
   .getElementById("card-pay-now-button")
-  .addEventListener("click", function () {
+  .addEventListener("click", function (event) {
     // let name = localStorage.getItem("userkanaam")
     var person = prompt("Please enter your OTP", "");
     if (person == "1234") {
       alert("We are processing your payment !");
-      textTospeech(` Thank you for order ${username}`);
       // let arrr = ;
       pushOrderDetails();
       localStorage.setItem("cart", null);
       localStorage.setItem("address", null);
       // let cartlength=JSON.parse(localStorage.getItem("cart"));
       // document.getElementById("cart_no").innerText=cartlength.length;
+      window.location.href = "./index.html";
     } else {
       alert("Wrong OTP, Try Again");
     }
   });
+function paymentP() {
+  paymentUpiButton.style.backgroundColor = "whitesmoke";
+  paymentUpiButton.style.border = "none";
+  paymentNetBankingButton.style.backgroundColor = "whitesmoke";
+  paymentNetBankingButton.style.border = "none";
+  paymentWalletButton.style.backgroundColor = "whitesmoke";
+  paymentWalletButton.style.borderLeft = "none";
+  paymentCodButton.style.backgroundColor = "whitesmoke";
+  paymentCodButton.style.borderLeft = "none";
+  paymentDebitButton.style.backgroundColor = "white";
+  paymentDebitButton.style.borderLeft = "5px solid #42a2a2";
+
+  paymentWallet.style.backgroundColor = "whitesmoke";
+  paymentUpi.style.backgroundColor = "whitesmoke";
+  paymentNetBanking.style.backgroundColor = "whitesmoke";
+  paymentCod.style.backgroundColor = "whitesmoke";
+  paymentDebit.style.backgroundColor = "white";
+
+  document.getElementById("payment-debit").style.display = "block";
+  document.getElementById("payment-upi").style.display = "none";
+  document.getElementById("payment-wallet").style.display = "none";
+  document.getElementById("payment-net-banking").style.display = "none";
+  document.getElementById("payment-cod").style.display = "none";
+  // document.getElementById("payment-net-banking").style.display = "none";
+}
+
+paymentP();
