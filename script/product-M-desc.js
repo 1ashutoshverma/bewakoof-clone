@@ -21,6 +21,7 @@ percentage.textContent = `${per}% off`;
 
 document.querySelector("#add_to_cart").addEventListener("click", () => {
   bag.push(data);
+  alert("Product Added to Cart");
   console.log(data);
   localStorage.setItem("cart", JSON.stringify(bag));
 });
