@@ -1,4 +1,5 @@
 let data = JSON.parse(localStorage.getItem("cart")) || [];
+
 let sign_email = JSON.parse(localStorage.getItem("user")).email;
 const updateCart = () => {
   localStorage.setItem("cart", JSON.stringify(data));
@@ -34,6 +35,7 @@ if (check_add != null) {
   document.getElementById("address").style.display = "block";
   document.getElementById("continue").style.display = "none";
 }
+
 const empty = () => {
   let image = document.createElement("img");
   image.src =
@@ -49,6 +51,7 @@ const empty = () => {
 };
 empty();
 document.getElementById("length").innerText = data.length;
+
 const appending = (data) => {
   let cont = document.getElementById("items");
   cont.innerHTML = null;
@@ -110,6 +113,7 @@ const appending = (data) => {
     cont.append(div2);
   });
 };
+
 appending(data);
 const removeproduct = (index) => {
   data.splice(index, 1);

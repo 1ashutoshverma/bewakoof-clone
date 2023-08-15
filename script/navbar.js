@@ -1,4 +1,10 @@
 //for women
+let cartQuantity = JSON.parse(localStorage.getItem("cart")) || [];
+
+var cartquantity = document.querySelectorAll(".cart-quantity");
+cartquantity.forEach((ele) => {
+  ele.textContent = cartQuantity.length;
+});
 var womenData = [
   [
     "Topwear",
