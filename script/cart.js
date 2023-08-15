@@ -1,6 +1,13 @@
 let data = JSON.parse(localStorage.getItem("cart")) || [];
 
-let sign_email = JSON.parse(localStorage.getItem("user")).email;
+let temp = JSON.parse(localStorage.getItem("user")) || {};
+let sign_email = "";
+if (Object.keys(temp).length === 0) {
+  alert("First Login");
+  window.location.replace("./login.html");
+} else {
+  sign_email = JSON.parse(localStorage.getItem("user")).email;
+}
 const updateCart = () => {
   localStorage.setItem("cart", JSON.stringify(data));
   window.location.reload();
