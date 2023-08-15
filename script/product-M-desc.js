@@ -27,8 +27,8 @@ document.querySelector("#add_to_cart").addEventListener("click", () => {
     data.quantity = 1;
     bag.push(data);
   }
-
   alert("Product Added to Cart");
+
   localStorage.setItem("cart", JSON.stringify(bag));
 });
 

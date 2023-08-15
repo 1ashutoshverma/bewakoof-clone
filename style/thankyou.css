@@ -1,0 +1,31 @@
+#mainContent {
+  text-align: center;
+}
+#div1 img {
+  width: 25%;
+  margin: auto;
+  /* text-align: center; */
+}
+
+#div2 {
+  width: 100%;
+  margin: auto;
+}
+
+#div2 img {
+  width: 70%;
+  /* margin: auto ; */
+  margin: 60px 0;
+}
+
+#div3 button {
+  font-size: 20px;
+  margin: 10px 0 30px 0;
+  padding: 15px 35px;
+  color: teal;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid teal;
+  /* border-color: teal; */
+  border-radius: 5px;
+}

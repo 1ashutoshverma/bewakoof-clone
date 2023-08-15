@@ -1,6 +1,25 @@
 let data = JSON.parse(localStorage.getItem("cart")) || [];
 
 let sign_email = JSON.parse(localStorage.getItem("user")).email;
+const updateCart = () => {
+  localStorage.setItem("cart", JSON.stringify(data));
+  window.location.reload();
+};
+
+const increaseQuantity = (index) => {
+  data[index].quantity++;
+  updateCart();
+};
+
+const decreaseQuantity = (index) => {
+  if (data[index].quantity > 1) {
+    data[index].quantity--;
+  } else {
+    removeproduct(index);
+  }
+  updateCart();
+};
+
 document.getElementById("sign-email").innerText = sign_email;
 if (data.length == 0) {
   document.getElementById("empty-bag").style.display = "block";
@@ -71,10 +90,26 @@ const appending = (data) => {
       removeproduct(index);
     };
 
+    let quantityDiv = document.createElement("div");
+    quantityDiv.classList.add("quantity-div");
+
+    let minusButton = document.createElement("button");
+    minusButton.innerText = "-";
+    minusButton.onclick = () => decreaseQuantity(index);
+
+    let quantity = document.createElement("span");
+    quantity.innerText = element.quantity;
+
+    let plusButton = document.createElement("button");
+    plusButton.innerText = "+";
+    plusButton.onclick = () => increaseQuantity(index);
+
+    quantityDiv.append(plusButton, quantity, minusButton);
+
     spec.append(p, ins, del);
     imagediv.append(img);
     div.append(spec, imagediv);
-    div2.append(div, remove);
+    div2.append(div, remove, quantityDiv);
     cont.append(div2);
   });
 };
@@ -88,19 +123,21 @@ const removeproduct = (index) => {
 };
 let sum = 0;
 data.forEach((el) => {
-  sum += +el.price;
+  sum += Number(el.price) * Number(el.quantity);
 });
 document.getElementById("total").innerText = "₹ " + sum;
 console.log(sum);
 let bag_discount = 0;
+let totalQuantity = 0;
 data.forEach((el) => {
-  bag_discount += +(el.price - el.disPrice);
+  bag_discount += Number(el.price - el.disPrice) * Number(el.quantity);
+  totalQuantity += Number(el.quantity);
 });
 document.getElementById("off").innerText = "- ₹ " + bag_discount;
 document.getElementById("save-span").innerText = "₹ " + bag_discount;
 let final = 0;
 data.forEach((el) => {
-  final += +el.disPrice;
+  final += Number(el.disPrice) * Number(el.quantity);
 });
 document.getElementById("final-price").innerText = "₹ " + final;
 document.getElementById("span-price").innerText = "₹ " + final;
@@ -158,18 +195,4 @@ document.getElementById("continue").onclick = () => {
 document.getElementById("logo").onclick = () => {
   window.location.href = "index.html";
 };
-let cartlength = JSON.parse(localStorage.getItem("cart")) || [];
-if (cartlength == undefined) {
-  cartlength = [];
-}
-document.getElementById("cart_no").innerText = cartlength.length;
-let username = localStorage.getItem("username");
-let useremail = localStorage.getItem("email");
-let usernum = localStorage.getItem("mobile");
-if (username != null && useremail != null && usernum != null) {
-  document.getElementById("profile").style.display = "block";
-  document.getElementById("loginid").style.display = "none";
-} else {
-  document.getElementById("profile").style.display = "none";
-  document.getElementById("loginid").style.display = "block";
-}
+document.querySelector("#length").innerText = totalQuantity;
