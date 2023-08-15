@@ -138,6 +138,9 @@ body {
   padding-bottom: 3%;
   border-bottom: 3px solid rgb(241, 241, 241);
 }
+#btn > button:first-child:active {
+  background-color: #d8ac0e;
+}
 #add_to_cart {
   width: 49%;
   display: flex;
@@ -149,11 +152,13 @@ body {
   font-weight: 600;
   font-size: 1.2em;
   gap: 10px;
+  border-radius: 3px;
 }
 #add_to_cart:hover,
 #wishlist:hover {
   cursor: pointer;
 }
+
 #wishlist {
   width: 49%;
   display: flex;
@@ -167,6 +172,7 @@ body {
   font-size: 1.2em;
   color: rgb(128, 128, 128);
   gap: 10px;
+  border-radius: 3px;
 }
 
 .desc {

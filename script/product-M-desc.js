@@ -19,7 +19,7 @@ let per = Math.round(100 - (Number(data.disPrice) / Number(data.price)) * 100);
 console.log(per);
 percentage.textContent = `${per}% off`;
 
-document.querySelector("#add_to_cart").addEventListener("click", () => {
+document.querySelector("#add_to_cart").addEventListener("click", (ele) => {
   let existingItem = bag.find((item) => item.name === data.name);
   if (existingItem) {
     existingItem.quantity = (existingItem.quantity || 1) + 1;
@@ -35,7 +35,7 @@ document.querySelector("#add_to_cart").addEventListener("click", () => {
   cartquantity.forEach((ele) => {
     ele.textContent = quant;
   });
-  alert("Product Added to Cart");
+  // alert("Product Added to Cart");
   localStorage.setItem("cart", JSON.stringify(bag));
 });
 

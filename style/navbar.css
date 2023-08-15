@@ -128,9 +128,16 @@ body {
   margin: 0;
   display: flex;
 }
-/* .cart-quantity { */
-/* display: none; */
-/* } */
+.cart-quantity {
+  /* border: 1px solid red; */
+  width: 16px;
+  height: 16px;
+  background-color: #fdd835;
+  border-radius: 50%;
+  margin-left: -15px;
+  margin-top: -4px;
+  text-align: center;
+}
 /* For all dropdown menu */
 #dropdown_menu_men,
 #dropdown_menu_women,
