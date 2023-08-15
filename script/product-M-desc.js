@@ -20,14 +20,15 @@ console.log(per);
 percentage.textContent = `${per}% off`;
 
 document.querySelector("#add_to_cart").addEventListener("click", () => {
-  bag.push(data);
-  let cartquantity = document.querySelectorAll(".cart-quantity");
-  cartquantity.forEach((ele) => {
-    ele.textContent = bag.length;
-  });
-  alert("Product Added to Cart");
+  let existingItem = bag.find((item) => item.name === data.name);
+  if (existingItem) {
+    existingItem.quantity = (existingItem.quantity || 1) + 1;
+  } else {
+    data.quantity = 1;
+    bag.push(data);
+  }
 
-  console.log(data);
+  alert("Product Added to Cart");
   localStorage.setItem("cart", JSON.stringify(bag));
 });
 
