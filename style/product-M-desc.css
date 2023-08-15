@@ -1,0 +1,288 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+#main_container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+}
+#data_container {
+  display: flex;
+  justify-content: space-between;
+}
+/* photo Side */
+#photo {
+  width: 44%;
+  height: fit-content;
+  position: sticky;
+  top: 75px;
+}
+#photo img {
+  width: 100%;
+}
+
+/* details side */
+#details {
+  width: 54%;
+}
+
+#brand_name {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 0;
+  color: rgb(29, 28, 28);
+}
+
+#product_name {
+  font-size: 1.2em;
+  margin-top: 8px;
+  color: rgb(125, 125, 125);
+}
+
+#rating {
+  border: 1px solid rgb(173, 172, 172);
+  width: fit-content;
+  padding: 2px 5px;
+  background-color: rgb(250, 250, 250);
+}
+
+#product_price {
+  margin-bottom: 0;
+}
+#product_price span:nth-child(1) {
+  margin-right: 8px;
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+#product_price span:nth-child(2) {
+  margin-right: 8px;
+  text-decoration: line-through;
+  color: rgb(125, 125, 125);
+}
+#product_price span:nth-child(3) {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: rgb(11, 228, 11);
+}
+#inclusive {
+  margin: 0;
+  font-size: small;
+  color: rgb(150, 150, 150);
+}
+
+#cotton {
+  width: fit-content;
+  border: 1px solid rgb(125, 125, 125);
+  padding: 2px 5px;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: rgb(125, 125, 125);
+}
+
+#tribe_details {
+  border-top: 3px solid rgb(241, 241, 241);
+  border-bottom: 3px solid rgb(241, 241, 241);
+  padding: 20px 0;
+  font-size: 1em;
+}
+#tribe_details a {
+  text-decoration: none;
+  color: rgb(6, 170, 6);
+}
+
+#size_heading {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+#size_heading a {
+  text-decoration: none;
+  color: #42a2a2;
+}
+
+#size_selector {
+  /* border: 1px solid red; */
+  display: flex;
+  padding: 1em 0;
+  /* border: 1px solid red; */
+}
+#size_selector span {
+  border: 1px solid black;
+  padding: 3%;
+  margin-right: 1%;
+  border-radius: 5px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+}
+#size_selector span:hover {
+  cursor: pointer;
+}
+#size_selector span:nth-child(1),
+#size_selector span:nth-child(4),
+#size_selector span:nth-child(6) {
+  border: 1px solid rgb(216, 216, 216);
+  color: rgb(216, 216, 216);
+}
+
+#btn {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3%;
+  border-bottom: 3px solid rgb(241, 241, 241);
+}
+#add_to_cart {
+  width: 49%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.7% 0;
+  border: none;
+  background-color: #ffd84d;
+  font-weight: 600;
+  font-size: 1.2em;
+  gap: 10px;
+}
+#add_to_cart:hover,
+#wishlist:hover {
+  cursor: pointer;
+}
+#wishlist {
+  width: 49%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.7% 0;
+  border: none;
+  background-color: white;
+  border: 1px solid rgb(211, 211, 211);
+  font-weight: 600;
+  font-size: 1.2em;
+  color: rgb(128, 128, 128);
+  gap: 10px;
+}
+
+.desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0px;
+}
+.desc img {
+  width: 5%;
+}
+.desc div {
+  width: 90%;
+  padding-left: 3%;
+}
+.desc div p {
+  margin: 0;
+}
+.desc div p:first-child {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.desc div p:last-child {
+  color: rgb(196, 193, 193);
+}
+
+.desc span {
+  width: 5%;
+  font-size: 1.5em;
+}
+.desc span:hover {
+  cursor: pointer;
+}
+
+#offer {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  display: none;
+}
+#offer div:first-child {
+  width: 6%;
+  align-self: baseline;
+}
+
+#offer img {
+  width: 100%;
+}
+#offer div p {
+  margin: 0;
+  margin-left: 2%;
+}
+#offer div a {
+  margin-left: 2%;
+  text-decoration: none;
+  color: #1aa35e;
+  font-weight: 600;
+}
+
+#description {
+  display: none;
+}
+#Return {
+  display: none;
+}
+
+/* logos */
+#logos {
+  margin: 3% 0;
+  display: flex;
+  justify-content: space-around;
+}
+#logos > div {
+  width: 20%;
+}
+#logos > div > div {
+  display: flex;
+  justify-content: center;
+}
+#logos img {
+  width: 50%;
+}
+
+#logos p {
+  font-size: smaller;
+  text-align: center;
+  color: rgb(117, 117, 117);
+}
+
+@media screen and (width<900px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media screen and (width<650px) {
+  body {
+    font-size: 12px;
+  }
+}
+@media screen and (width<500px) {
+  body {
+    font-size: 12px;
+  }
+  #main_container {
+    padding-top: 60px;
+  }
+  #data_container {
+    flex-direction: column;
+  }
+  #photo {
+    position: inherit;
+  }
+  #photo,
+  #details {
+    width: 95%;
+  }
+}

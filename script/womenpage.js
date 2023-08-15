@@ -140,7 +140,7 @@ function updateCart(arr) {
     let like = document.createElement("img");
     //Assign values
 
-    pagelink.setAttribute("href", ele.pagelink);
+    pagelink.setAttribute("href", "#");
     img.setAttribute("src", ele.img);
     brand.textContent = ele.brand;
     name.textContent = ele.name;
